@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Finder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+  <div class="hero-content">
+    <h1>🍊 Recipe Finder</h1>
+    <p>Discover delicious recipes instantly!</p>
+    <div class="search-container">
+  <input type="text" id="searchInput" placeholder="Search for a dish...">
+
+  <!-- Veg/Non-Veg Filter -->
+  <select id="diet" class="filter-dropdown">
+    <option value="">All</option>
+    <option value="vegetarian">Vegetarian</option>
+    <option value="non-vegetarian">Non-Vegetarian</option>
+  </select>
+  <select id="cuisine" class="filter-dropdown">
+  <option value="">All Cuisines</option>
+  <option value="indian">Indian</option>
+  <option value="italian">Italian</option>
+  <option value="chinese">Chinese</option>
+  <option value="mexican">Mexican</option>
+  <option value="french">French</option>
+  <option value="thai">Thai</option>
+</select>
+
+  <button onclick="searchRecipe()">Search</button>
+</div>
+  </div>
+</header>
+
+<main>
+  <!-- Spinner -->
+  <div id="loading-spinner" class="spinner" style="display: none;"></div>
+
+  <!-- Recipe results -->
+  <div id="recipe-result" class="recipe-grid"></div>
+</main>
+<footer>
+  <p>Made with ❤️ by <strong>Eshika</strong> | Powered by Spoonacular API</p>
+</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

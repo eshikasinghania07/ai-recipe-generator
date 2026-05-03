@@ -1,0 +1,186 @@
+/* General Page Styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background: #fffaf5; /* soft food-like background */
+  color: #333;
+}
+
+/* Header */
+
+
+/* Search Bar */
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto;
+  gap: 10px;
+}
+
+.search-container input {
+  padding: 12px;
+  width: 300px;
+  border: 2px solid #ff7b42;
+  border-radius: 30px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.search-container button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 30px;
+  background: #ff7b42;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-container button:hover {
+  background: #e85c1f;
+}
+
+/* Recipe Grid */
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 20px;
+}
+
+/* Recipe Card with pastel colors */
+.recipe-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+/* Pastel gradient border effect */
+.recipe-card {
+  border: 3px solid transparent;
+  background-image: linear-gradient(white, white),
+    linear-gradient(45deg, #ffecd2, #fcb69f, #fad0c4, #ffd1ff);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+}
+
+.recipe-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.recipe-card h2 {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  color: #ff5722;
+}
+
+.recipe-card a {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 14px;
+  background: #ff7b42;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.recipe-card a:hover {
+  background: #e85c1f;
+}
+/* Spinner */
+.spinner {
+  margin: 20px auto;
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff7b42;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+/* Hero Section */
+.hero {
+  background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836') no-repeat center center/cover;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+/* Dark overlay for readability */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* Adjust search bar inside hero */
+.hero .search-container {
+  justify-content: center;
+}
+/* Footer */
+footer {
+  background: #ff7b42;  /* orange to match theme */
+  color: white;
+  text-align: center;
+  padding: 15px 10px;
+  margin-top: 30px;
+  font-size: 0.95rem;
+}
+
+footer strong {
+  color: #fff176; /* soft yellow highlight for your name */
+}
+/* Veg / Non-Veg Dropdown */
+.filter-dropdown {
+  padding: 12px;
+  border: 2px solid #ff7b42;
+  border-radius: 30px;
+  outline: none;
+  font-size: 1rem;
+  background: white;
+  color: #333;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filter-dropdown:hover {
+  background: #fff3e6; /* light pastel orange on hover */
+  border-color: #e85c1f;
+}
