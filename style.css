@@ -184,3 +184,30 @@ footer strong {
   background: #fff3e6; /* light pastel orange on hover */
   border-color: #e85c1f;
 }
+.view-btn,
+.fav-btn{
+
+  margin-top:12px;
+  padding:12px 18px;
+  border:none;
+  border-radius:25px;
+  background:#ff7b42;
+  color:white;
+  cursor:pointer;
+  transition:0.3s;
+  font-size:15px;
+
+}
+
+.view-btn:hover,
+.fav-btn:hover{
+
+  background:#e85c1f;
+
+}
+
+.recipe-card a{
+
+  text-decoration:none;
+
+}

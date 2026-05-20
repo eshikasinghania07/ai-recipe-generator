@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Meal Planner</title>
+
+  <link rel="stylesheet" href="planner.css">
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+
+    <h2>🍴 🤖 AI Recipe System</h2>
+
+    <ul>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="index.html">Recipes</a></li>
+      <li><a href="favorites.html">Favorites</a></li>
+      <li><a href="planner.html">Meal Planner</a></li>
+      <li><a href="login.html" onclick="logout()">Logout</a></li>
+    </ul>
+
+  </nav>
+
+  <!-- Planner Section -->
+  <section class="planner-section">
+
+    <h1>🍱 Daily Meal Planner</h1>
+
+    <div class="planner-container">
+
+      <!-- Breakfast -->
+      <div class="meal-card">
+
+        <h2>Breakfast</h2>
+
+        <input type="text" id="breakfastInput" placeholder="Enter breakfast meal">
+
+        <button onclick="saveMeal('breakfast')">
+          Save Meal
+        </button>
+
+        <p id="breakfastMeal"></p>
+
+      </div>
+
+      <!-- Lunch -->
+      <div class="meal-card">
+
+        <h2>Lunch</h2>
+
+        <input type="text" id="lunchInput" placeholder="Enter lunch meal">
+
+        <button onclick="saveMeal('lunch')">
+          Save Meal
+        </button>
+
+        <p id="lunchMeal"></p>
+
+      </div>
+
+      <!-- Dinner -->
+      <div class="meal-card">
+
+        <h2>Dinner</h2>
+
+        <input type="text" id="dinnerInput" placeholder="Enter dinner meal">
+
+        <button onclick="saveMeal('dinner')">
+          Save Meal
+        </button>
+
+        <p id="dinnerMeal"></p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <script src="planner.js"></script>
+
+</body>
+</html>

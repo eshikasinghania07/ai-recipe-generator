@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - AI Smart Recipe Recommendation System</title>
+
+  <link rel="stylesheet" href="dashboard.css">
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+
+    <h2>🍴 Smart Recipe</h2>
+
+    <ul>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="index.html">Recipes</a></li>
+      <li><a href="favorites.html">Favorites</a></li>
+      <li><a href="planner.html">Meal Planner</a></li>
+      <li><a href="login.html" onclick="logout()">Logout</a></li>
+    </ul>
+
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <h1 id="welcomeText">Welcome 👋</h1>
+
+      <p>
+        Discover personalized recipes and plan your meals smartly.
+      </p>
+
+      <a href="index.html">
+        <button>Explore Recipes</button>
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats">
+
+    <div class="card">
+      <h2>120+</h2>
+      <p>Recipes Available</p>
+    </div>
+
+    <div class="card">
+      <h2>25+</h2>
+      <p>Healthy Meals</p>
+    </div>
+
+    <div class="card">
+      <h2>15+</h2>
+      <p>Meal Plans</p>
+    </div>
+
+  </section>
+
+  <!-- Recommended Recipes -->
+  <section class="recommendations">
+
+    <h2>⭐ Recommended For You</h2>
+    <p id="recentSearchText"></p>
+    <p id="recommendationText"></p>
+
+    <div class="recipe-container">
+
+      <!-- Pasta -->
+      <div class="recipe-card">
+
+        <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?q=80&w=687&auto=format&fit=crop">
+
+        <h3>Pasta Alfredo</h3>
+
+        <button onclick="addToFavorites(
+        'Pasta Alfredo',
+        'https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?q=80&w=687&auto=format&fit=crop'
+        )">
+        ❤️ Add to Favorites
+        </button>
+
+      </div>
+
+      <!-- Burger -->
+      <div class="recipe-card">
+
+        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=699&auto=format&fit=crop">
+
+        <h3>Veg Burger</h3>
+
+        <button onclick="addToFavorites(
+        'Veg Burger',
+        'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=699&auto=format&fit=crop'
+        )">
+        ❤️ Add to Favorites
+        </button>
+
+      </div>
+
+      <!-- Salad -->
+      <div class="recipe-card">
+
+        <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&w=687&auto=format&fit=crop">
+
+        <h3>Healthy Salad</h3>
+
+        <button onclick="addToFavorites(
+        'Healthy Salad',
+        'https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&w=687&auto=format&fit=crop'
+        )">
+        ❤️ Add to Favorites
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <script src="dashboard.js"></script>
+
+</body>
+</html>

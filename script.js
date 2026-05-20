@@ -1,5 +1,6 @@
 async function searchRecipe() {
   let query = document.getElementById("searchInput").value.trim();
+  localStorage.setItem("lastSearch", query);
   let diet = document.getElementById("diet")?.value;
   let cuisine = document.getElementById("cuisine")?.value;
   let resultDiv = document.getElementById("recipe-result");
@@ -44,13 +45,35 @@ async function searchRecipe() {
     resultDiv.innerHTML = "";
     data.results.forEach(recipe => {
       resultDiv.innerHTML += `
-        <div class="recipe-card">
-  <img src="${recipe.image}" alt="${recipe.title}">
-  <h2>${recipe.title}</h2>
-  <a href="https://spoonacular.com/recipes/${recipe.title.replace(/ /g, "-")}-${recipe.id}" 
-     target="_blank">View Recipe</a>
+
+<div class="recipe-card">
+
+    <img src="${recipe.image}" alt="${recipe.title}">
+
+    <h2>${recipe.title}</h2>
+
+    <a href="https://spoonacular.com/recipes/${recipe.title.replace(/ /g, "-")}-${recipe.id}" target="_blank">
+
+        <button class="view-btn">
+            View Recipe
+        </button>
+
+    </a>
+
+    <button 
+    class="fav-btn"
+    onclick="addToFavorites(
+    '${recipe.title}',
+    '${recipe.image}'
+    )">
+
+    ❤️ Add to Favorites
+
+    </button>
+
 </div>
-      `;
+
+`;
     });
 
   } catch (error) {
@@ -58,4 +81,19 @@ async function searchRecipe() {
     spinner.style.display = "none";
     resultDiv.innerHTML = "<p>Error fetching recipe. Please try again later.</p>";
   }
+}
+function addToFavorites(title, image){
+
+    let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
+    favorites.push({
+        title: title,
+        image: image,
+        link: "index.html"
+    });
+
+    localStorage.setItem("favorites", JSON.stringify(favorites));
+
+    alert("Recipe added to favorites ❤️");
+
 }

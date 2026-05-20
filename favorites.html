@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Favorites</title>
+
+  <link rel="stylesheet" href="favorites.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h2>🍴 AI Recipe System</h2>
+
+    <ul>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="index.html">Recipes</a></li>
+      <li><a href="favorites.html">Favorites</a></li>
+      <li><a href="login.html" onclick="logout()">Logout</a></li>
+    </ul>
+  </nav>
+
+  <!-- Heading -->
+  <section class="favorites-section">
+
+    <h1>❤️ Your Favorite Recipes</h1>
+
+    <div id="favoritesContainer" class="recipe-container"></div>
+
+  </section>
+
+  <script src="favorites.js"></script>
+
+</body>
+</html>

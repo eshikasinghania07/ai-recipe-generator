@@ -1,0 +1,91 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
+}
+
+body{
+  background:#fffaf5;
+}
+
+/* Navbar */
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 8%;
+  background:#ff7b42;
+  color:white;
+}
+
+.navbar ul{
+  display:flex;
+  list-style:none;
+  gap:20px;
+}
+
+.navbar a{
+  color:white;
+  text-decoration:none;
+}
+
+/* Planner Section */
+.planner-section{
+  padding:60px 8%;
+}
+
+.planner-section h1{
+  margin-bottom:40px;
+  color:#333;
+}
+
+/* Cards */
+.planner-container{
+  display:flex;
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+.meal-card{
+  background:white;
+  width:320px;
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+
+.meal-card h2{
+  margin-bottom:20px;
+  color:#ff7b42;
+}
+
+.meal-card input{
+  width:100%;
+  padding:12px;
+  border:2px solid #ff7b42;
+  border-radius:10px;
+  margin-bottom:15px;
+  outline:none;
+}
+
+.meal-card button{
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:10px;
+  background:#ff7b42;
+  color:white;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.meal-card button:hover{
+  background:#e85c1f;
+}
+
+.meal-card p{
+  margin-top:20px;
+  font-weight:500;
+  color:#333;
+}
