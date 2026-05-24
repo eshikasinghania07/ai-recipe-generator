@@ -93,6 +93,10 @@ function addToFavorites(title, image){
     });
 
     localStorage.setItem("favorites", JSON.stringify(favorites));
+  database.ref("favorites").push({
+    title: title,
+    image: image
+});
 
     alert("Recipe added to favorites ❤️");
 
