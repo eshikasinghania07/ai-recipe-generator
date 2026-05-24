@@ -256,3 +256,17 @@ footer strong {
   }
 
 }
+@media screen and (max-width: 768px){
+
+  .search-box{
+    width:90%;
+  }
+
+  input,
+  select,
+  button{
+    width:100%;
+    margin-bottom:10px;
+  }
+
+}
