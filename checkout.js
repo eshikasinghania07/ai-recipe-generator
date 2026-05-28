@@ -4,6 +4,6 @@ function placeOrder(){
 
   localStorage.removeItem("cart");
 
-  window.location.href = "recipes.html";
+  window.location.href = "tracking.html";
 
 }
