@@ -70,6 +70,14 @@ async function searchRecipe() {
     ❤️ Add to Favorites
 
     </button>
+    <button 
+class="cart-btn"
+onclick="addToCart(
+'${recipe.title}',
+'${recipe.image}'
+)">
+🛒 Add to Cart
+</button>
 
 </div>
 
@@ -99,5 +107,26 @@ function addToFavorites(title, image){
 });
 
     alert("Recipe added to favorites ❤️");
+
+}
+function addToCart(title, image){
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    cart.push({
+        title: title,
+        image: image,
+        price: 299
+    });
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    database.ref("cart").push({
+        title: title,
+        image: image,
+        price: 299
+    });
+
+    alert("Item added to cart 🛒");
 
 }
