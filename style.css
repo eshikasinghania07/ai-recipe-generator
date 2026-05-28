@@ -270,3 +270,22 @@ footer strong {
   }
 
 }
+.cart-btn{
+
+  margin-top:10px;
+  padding:12px 18px;
+  border:none;
+  border-radius:25px;
+  background:#28a745;
+  color:white;
+  cursor:pointer;
+  transition:0.3s;
+  font-size:15px;
+
+}
+
+.cart-btn:hover{
+
+  background:#1f7d34;
+
+}
