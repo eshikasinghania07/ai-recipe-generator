@@ -116,7 +116,7 @@ function addToCart(title, image){
     cart.push({
         title: title,
         image: image,
-        price: 299
+        price: Math.floor(Math.random() * 300) + 199
     });
 
     localStorage.setItem("cart", JSON.stringify(cart));
@@ -124,7 +124,7 @@ function addToCart(title, image){
     database.ref("cart").push({
         title: title,
         image: image,
-        price: 299
+        price: Math.floor(Math.random() * 300) + 199
     });
 
     alert("Item added to cart 🛒");
