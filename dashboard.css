@@ -234,3 +234,20 @@ recipe-card button:hover{
   }
 
 }
+  @media screen and (max-width: 768px){
+
+  .stats{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .recipe-container{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .recipe-card{
+    width:90%;
+  }
+
+}
