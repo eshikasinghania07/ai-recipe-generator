@@ -175,6 +175,21 @@ body{
   font-size:18px;
 
 }
+recipe-card button:hover{
+  background:#e85c1f;
+}
+.recipe-card{
+  transition:0.3s;
+}
+
+.recipe-card:hover{
+  transform:translateY(-8px);
+}
+#recentSearchText{
+
+  margin-bottom:25px;
+  color:#555;
+  font-size:18px;
 /* Responsive Design */
 
 @media screen and (max-width: 768px){
